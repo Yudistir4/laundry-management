@@ -14,6 +14,11 @@ export function LatestPost() {
       await utils.post.invalidate();
       setName("");
     },
+    onError(error, variables, context) {
+      console.log(error);
+      console.log(variables);
+      console.log(context);
+    },
   });
 
   return (
